@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .chart-widget-bar {
+   @apply cursor-pointer
+    }
+
+    .chart-widget-bar:hover > p{
+    @apply opacity-100 translate-y-0
+    }
+
+    .akauntme-custom-scroller-2{
+        scrollbar-width: thin;
+        scrollbar-color:#635BFF rgba(255, 255, 255, 1);
+        scroll-margin: 20px;
+        scroll-behavior: smooth;
+        scroll-padding: 10px;
+        }
+
+        .akauntme-custom-scroller-none{
+            scrollbar-width: none;
+            scrollbar-color:#635BFF rgba(255, 255, 255, 1);
+            scroll-behavior: smooth;
+            scroll-padding: 10px;
+        }
+
+    .akauntme-custom-scroller{
+    scrollbar-width: none;
+    scrollbar-color:#635BFF rgba(255, 255, 255, 1);
+    scroll-margin: 20px;
+    scroll-behavior: smooth;
+    }
+
+    .akauntme-custom-scroller::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+    .akauntme-custom-scroller:hover{
+    scrollbar-width: thin;
+    }
+
+.default-pd {
+@apply px-3 lg:px-5 py-3
+}
+
+.desktop-logo {
+@apply relative before:content-[''] before:w-full before:h-[1px] before:bg-white/50 before:absolute before:-bottom-5
+}
+
+
+.desktop-sidebar-link {
+@apply flex justify-start items-center ml-4 w-[180px] transition-all px-4 text-white gap-x-3 hover:bg-white dark:hover:bg-slate-900 hover:text-akauntme py-2 rounded-md  cursor-pointer
+}
+
+.desktop-sidebar-link.active {
+@apply shadow-sm bg-white text-akauntme dark:bg-slate-900
+}
+
+.desktop-sidebar-link.active svg,
+.desktop-sidebar-link:hover svg {
+@apply fill-akauntme
+}
+
+.mob-link {
+@apply flex flex-col items-center text-gray-500
+}
+
+.mob-link.active {
+@apply text-akauntme
+}
+
+.mob-link.active svg{
+@apply fill-akauntme
+}
+
+.chart-widget-link {
+    @apply flex items-center justify-center gap-x-3 hover:bg-white hover:text-akauntme rounded-full px-2 py-[2px] font-medium transition-all
+}
+
+.chart-widget-link svg {
+    @apply transition-all 
+}
+
+.chart-widget-link:hover svg {
+    @apply transform translate-x-1 fill-akauntme
+}
+
+
+}

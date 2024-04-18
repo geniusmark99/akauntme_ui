@@ -1,0 +1,19 @@
+<div class="flex overflow-hidden flex-col">
+    <navbar-widget />
+    <!-- <notification-widget /> -->
+
+    <main class="overflow-y-auto mt-2 w-full default-pd h-screen">
+        <greeting-widget />
+        <div
+            class="flex justify-between w-full whitespace-nowrap overflow-y-hidden overflow-x-auto py-3  gap-x-2 mt-4 akauntme-custom-scroller">
+            @for ( dashboardList of dashboardLists; track dashboardList.id) {
+            <chart-widget [chartName]="dashboardList.name" [chartDays]="dashboardList.days"
+                [chartDaysTotalAmounts]="dashboardList.amounts" [chartAmountHeights]="dashboardList.height" />
+            }
+
+
+        </div>
+    </main>
+
+
+</div>
