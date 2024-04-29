@@ -2,19 +2,22 @@
     <navbar-widget />
     <!-- <notification-widget /> -->
 
-    <main class="overflow-y-auto mt-2 w-full default-pd h-screen">
+    <main class="overflow-y-auto mt-2 w-full default-pd h-screen overflow-x-hidden">
         <greeting-widget />
 
-        <div class="tab mt-4">
-            <div class="flex border-b-2 border-gray-200 dark:border-slate-800">
+        <div class="tab mt-4 overflow-x-auto">
+            <div class="flex border-b-2 border-gray-200 dark:border-slate-800 flex-nowrap">
                 <div (click)="activeTab = 'tab1'" [class.home-tab-active]="activeTab === 'tab1'"
-                    class="cursor-pointer p-4 text-slate-600 dark:text-slate-400 mr-4">Dashboard
+                    class="cursor-pointer text-xs md:text-sm p-4 text-slate-600 dark:text-slate-400 mr-4 whitespace-nowrap">
+                    Dashboard
                 </div>
                 <div (click)="activeTab = 'tab2'" [class.home-tab-active]="activeTab === 'tab2'"
-                    class="cursor-pointer p-4 text-slate-600 dark:text-slate-400 mx-4">Get Started
+                    class="cursor-pointer text-xs md:text-sm p-4 text-slate-600 dark:text-slate-400 mx-4 whitespace-nowrap">
+                    Get Started
                 </div>
                 <div (click)="activeTab = 'tab3'" [class.home-tab-active]="activeTab === 'tab3'"
-                    class="cursor-pointer p-4 text-slate-600 dark:text-slate-400 mx-4">Recent Update
+                    class="cursor-pointer text-xs md:text-sm p-4 text-slate-600 dark:text-slate-400 mx-4 whitespace-nowrap">
+                    Recent Update
                 </div>
             </div>
             @if (activeTab === 'tab1') {
