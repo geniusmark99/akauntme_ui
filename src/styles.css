@@ -1,52 +1,99 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer components {
 
-    .chart-widget-bar {
-   @apply cursor-pointer
-    }
 
-    .chart-widget-bar:hover > p{
-    @apply opacity-100 translate-y-0
-    }
+.slider-btn {
+@apply w-6 h-2 rounded-full bg-akauntme dark:bg-slate-700 flex justify-center items-center
+}
 
-    .akauntme-custom-scroller-2{
-        scrollbar-width: thin;
-        scrollbar-color:#635BFF rgba(255, 255, 255, 1);
-        scroll-margin: 20px;
-        scroll-behavior: smooth;
-        scroll-padding: 10px;
-        }
+.slider-btn > div {
+@apply pointer-events-none transition-all
+}
 
-        .akauntme-custom-scroller-none{
-            scrollbar-width: none;
-            scrollbar-color:#635BFF rgba(255, 255, 255, 1);
-            scroll-behavior: smooth;
-            scroll-padding: 10px;
-        }
+.slider-btn.active > div {
+@apply dark:bg-akauntme bg-white
+}
 
-    .akauntme-custom-scroller{
-    scrollbar-width: none;
-    scrollbar-color:#635BFF rgba(255, 255, 255, 1);
-    scroll-margin: 20px;
-    scroll-behavior: smooth;
-    }
+.chart-widget-bar {
+@apply cursor-pointer
+}
 
-    .akauntme-custom-scroller::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-    }
-    .akauntme-custom-scroller:hover{
-    scrollbar-width: thin;
-    }
+.chart-widget-bar:hover > p{
+@apply opacity-100 translate-y-0
+}
+
+.akauntme-custom-scroller-2{
+scrollbar-width: thin;
+scrollbar-color:#635BFF rgba(255, 255, 255, 1);
+scroll-margin: 20px;
+scroll-behavior: smooth;
+scroll-padding: 10px;
+}
+
+.akauntme-custom-scroller-none{
+scrollbar-width: none;
+scroll-behavior: smooth;
+}
+
+.dashboard-scroller {
+@apply flex justify-between w-full whitespace-nowrap overflow-y-hidden overflow-x-auto py-3 gap-x-2 mt-4 akauntme-custom-scroller-none
+}
+
+.dashboard-scroller > chart-widget{
+@apply transition-all
+}
+
+.dashboard-scroller.first > chart-widget{
+@apply translate-x-0
+}
+
+.dashboard-scroller.second > chart-widget{
+@apply -translate-x-[24em]
+}
+
+.dashboard-scroller.third > chart-widget{
+@apply -translate-x-[48em]
+}
+
+.dashboard-scroller.first > chart-widget,
+.dashboard-scroller.second > chart-widget,
+.dashboard-scroller.third > chart-widget
+{
+@apply lg:translate-x-0
+}
+
+
+/* .dashboard-scroller.second > chart-widget{
+@apply -translate-x-
+} */
+
+.akauntme-custom-scroller{
+scrollbar-width: none;
+scrollbar-color:#635BFF rgba(255, 255, 255, 1);
+scroll-margin: 20px;
+scroll-behavior: smooth;
+}
+
+.akauntme-custom-scroller::-webkit-scrollbar-thumb {
+border-radius: 10px;
+}
+.akauntme-custom-scroller:hover{
+scrollbar-width: thin;
+}
 
 .default-pd {
 @apply px-3 lg:px-5 py-3
 }
 
 .desktop-logo {
-@apply relative before:content-[''] before:w-full before:h-[1px] before:bg-white/50 before:absolute before:-bottom-5
+@apply relative justify-center items-center flex before:content-[''] before:w-screen before:h-[0.5px] before:bg-white/50 before:absolute before:-bottom-[22px] before:dark:bg-slate-700
 }
 
 
@@ -76,15 +123,15 @@
 }
 
 .chart-widget-link {
-    @apply flex items-center justify-center gap-x-3 hover:bg-white hover:text-akauntme rounded-full px-2 py-[2px] font-medium transition-all
+@apply flex items-center justify-center gap-x-3 hover:bg-white hover:text-akauntme rounded-full px-2 py-[2px] font-medium transition-all
 }
 
 .chart-widget-link svg {
-    @apply transition-all 
+@apply transition-all 
 }
 
 .chart-widget-link:hover svg {
-    @apply transform translate-x-1 fill-akauntme
+@apply transform translate-x-1 fill-akauntme
 }
 
 

@@ -1,5 +1,5 @@
 <footer
-    class="flex fixed bottom-2 bg-white dark:bg-slate-950 border-t-[0.5px] border-gray-200 dark:border-slate-600 w-full py-2 px-2 lg:hidden">
+    class="flex fixed bottom-[3px] bg-white dark:bg-slate-950 border-t-[0.5px] border-gray-200 dark:border-slate-600 w-full py-2 px-2 lg:hidden">
     <div class="flex justify-between w-full px-2">
 
         <a routerLink="/home" routerLinkActive="active" class="mob-link">
@@ -26,10 +26,10 @@
 
         <div class="flex justify-center flex-col relative gap-y-3 items-center">
             <button
-                class="size-16 rounded-full bg-akauntme text-white z-20 absolute -top-8 flex justify-center items-center"
+                class="size-20 rounded-full bg-akauntme text-white z-20 absolute -top-12 flex justify-center items-center"
                 (click)="ShowMenu()">
 
-                <div class="size-12 rounded-full bg-akauntme border border-white flex justify-center items-center">
+                <div class="size-16 rounded-full bg-akauntme border border-white flex justify-center items-center">
                     @if(show){
                     <svg width="42" height="28" viewBox="0 0 42 28" fill="none" xmlns="http://www.w3.org/2000/svg"
                         class="fill-white size-8">
@@ -59,24 +59,33 @@
 
 
             <div
-                class="grid grid-cols-3  z-10 grid-rows-3 absolute -top-[4.5rem]  h-[50px] w-[180px] gap-x-4 items-center *:rounded-full *:size-12 *:bg-akauntme">
-                <button [@openClose]="show ? 'open' : 'closed' "
-                    class="row-span-3 left-0 flex justify-center items-center flex-col text-sm">
+                class="grid grid-cols-3  z-10 grid-rows-3 absolute -top-[5.5rem]  h-[50px] w-[180px] gap-x-4 items-center *:rounded-full *:size-16 *:bg-akauntme">
 
+                <button [@openClose]="show ? 'open' : 'closed' "
+                    class="row-span-3 left-0 flex justify-center items-center flex-col text-xs text-white dark:text-slate-300 hover:scale-110 transition-all">
+                    <svg class="size-4 fill-white dark:fill-slate-300">
+                        <use href="#add-icon"></use>
+                    </svg>
                     <span>
                         Debts
                     </span>
                 </button>
                 <button [@openClose2]="show ? 'open' : 'closed' "
-                    class="row-span-1  flex justify-center items-center flex-col text-sm">
-                    <div>icon</div>
+                    class="row-span-1  flex justify-center items-center flex-col text-xs text-white dark:text-slate-300 hover:scale-110 transition-all">
+                    <svg class="size-4 fill-white dark:fill-slate-300">
+                        <use href="#add-icon"></use>
+                    </svg>
                     <span>
                         Sales
                     </span>
                 </button>
                 <button [@openClose3]="show ? 'open' : 'closed' "
-                    class="row-span-3 flex justify-center items-center flex-col text-sm">
-                    <div>icon</div>
+                    class="row-span-3 flex justify-center items-center flex-col text-xs text-white dark:text-slate-300 hover:scale-110 transition-all">
+
+                    <svg class="size-4 fill-white dark:fill-slate-300">
+                        <use href="#add-icon"></use>
+                    </svg>
+
                     <span>
                         Expenses
                     </span>

@@ -9,6 +9,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { StocksComponent } from './pages/stocks/stocks.component';
 import { ExpensesComponent } from './pages/expenses/expenses.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 export const routes: Routes = [
@@ -64,6 +65,11 @@ export const routes: Routes = [
         path: 'debts',
         title: 'Akauntme Debts',
         component: DebtsComponent
+    },
+    {
+        path: 'profile',
+        title: 'Akauntme Profile',
+        component: ProfileComponent
     },
     {
         path: '**',

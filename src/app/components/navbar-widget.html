@@ -17,7 +17,7 @@
                 </div>
 
                 <input type="text" placeholder="Search your sales, customers or reports" class="
-                w-full lg:w-[300px] dark:bg-slate-900
+                w-[280px] md:w-full lg:w-[33    0px] dark:bg-slate-900
                 block py-2 text-gray-700 dark:text-gray-400 placeholder-gray-400/70 dark:placeholder-gray-400 bg-['#7C7C79'] border-none rounded-lg 
                      pr-5  focus:border-none focus:outline-none focus:ring-0 focus:ring-opacity-40"
                     (keyup)="onSearch($event)">
@@ -27,17 +27,18 @@
 
     <div class="flex items-center justify-center gap-x-2">
         <button
-            class="size-10 flex justify-center items-center rounded-full border border-gray-100 dark:border-gray-500 relative">
-            <svg class="size-6 fill-gray-900 dark:fill-gray-500">
+            class="size-8 md:size-10 flex justify-center items-center rounded-full border border-gray-100 dark:border-gray-500 relative">
+            <svg class="size-[18px] md:size-6 fill-gray-900 dark:fill-gray-500">
                 <use href="#notification-icon"></use>
             </svg>
-            <div class="absolute rounded-full size-2 bg-red-500 top-2 right-2">
+            <div class="absolute rounded-full size-1 bg-red-500 top-2 right-2">
 
             </div>
         </button>
-        <div class="size-10 rounded-full  shadow-md shadow-akauntme/10 flex justify-center items-center">
-            <img src="../../assets/images/user-profile.svg" alt="" class="size-8">
-        </div>
+        <a routerLink="/profile"
+            class="size-6 md:size-8 rounded-full  shadow-md shadow-akauntme/10 flex justify-center items-center">
+            <img src="../../assets/images/user-profile.svg" alt="" class="size-6 md:size:8">
+        </a>
     </div>
 </nav>
 

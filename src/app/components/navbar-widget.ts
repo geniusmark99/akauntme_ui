@@ -1,11 +1,13 @@
 import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
 import { FormControl, FormControlDirective } from '@angular/forms';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { RouterLink } from "@angular/router";
 
 @Component({
     standalone: true,
     selector: 'navbar-widget',
     templateUrl: './navbar-widget.html',
+    imports: [RouterLink],
     animations: [
         trigger('dropdownAnimation', [
             transition(':enter', [style({ opacity: 0 }), animate('100ms', style({ opacity: 1 }))]),

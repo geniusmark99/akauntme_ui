@@ -1,0 +1,10 @@
+<div class="custom-swiper">
+    <div class="swiper-container">
+        <div class="swiper-wrapper" #swiperWrapper>
+            <ng-content></ng-content>
+        </div>
+        
+        <button class="btn btn-sm mr-2" (click)="prevSlide()">Prev</button>
+        <button class="btn btn-sm" (click)="nextSlide()">Next</button>
+    </div>
+</div>

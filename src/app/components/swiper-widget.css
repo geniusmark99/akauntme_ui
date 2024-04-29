@@ -1,0 +1,56 @@
+
+.custom-swiper {
+  position: relative; /* For buttons positioning */
+}
+
+/* Styles for the swiper container element */
+.swiper-container {
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  width: 100%; /* Adjust if needed */
+  margin: 0 auto; /* Center the swiper */
+}
+
+/* Styles for the swiper wrapper element */
+.swiper-wrapper {
+  display: flex;
+  width: calc(100% * number-of-slides); /* Adjust based on slide count */
+  scroll-behavior: smooth;
+}
+
+/* Styles for individual slides */
+.slide {
+  width: 100%; /* Ensures slides fill container width */
+  min-height: 300px; /* Set a minimum height for slides */
+  display: flex; /* Allows for flexible slide content layout */
+  align-items: center; /* Vertically center slide content */
+  justify-content: center; /* Horizontally center slide content */
+  /* Add other styles for slide appearance as needed */
+}
+
+/* Styles for navigation buttons (optional) */
+.custom-swiper button {
+  position: absolute; /* Position buttons outside the container */
+  top: 50%; /* Center buttons vertically */
+  transform: translateY(-50%); /* Offset button positioning */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White text color */
+  border: none; /* Remove button borders */
+  padding: 10px 15px; /* Add button padding */
+  cursor: pointer; /* Indicate clickable button */
+}
+
+.custom-swiper button:first-child { /* Style left button */
+  left: 10px; /* Position left button */
+}
+
+.custom-swiper button:last-child { /* Style right button */
+  right: 10px; /* Position right button */
+}
+
+
+  .slide {
+width: 100%;
+background-color: yellow;
+  }
