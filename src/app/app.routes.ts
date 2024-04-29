@@ -15,20 +15,21 @@ import { ProfileComponent } from './pages/profile/profile.component';
 export const routes: Routes = [
 
     {
-        path: 'home',
-        title: 'Akauntme Dashboard',
-        component: HomeComponent,
-    },
-    {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
     },
-
+    {
+        path: 'home',
+        title: 'Akauntme Dashboard',
+        component: HomeComponent,
+        data: { animation: 'openClosePage' },
+    },
     {
         path: 'settings',
         title: 'Akauntme Settings',
-        component: SettingsComponent
+        component: SettingsComponent,
+        data: { animation: 'openClosePage' },
     }, {
         path: 'reports',
         title: 'Akauntme Reports',

@@ -1,8 +1,25 @@
 <nav
     class="flex justify-between items-center shadow-sm default-pd dark:bg-slate-800 dark:shadow-slate-900 dark:border-b-[0.5px] dark:border-slate-700">
 
-    <div>
-        <img src="../../assets/images/company-logo.svg" class="rounded-full size-8 md:size-10" />
+    <button (click)="openModal()"
+        class="lg:hidden rounded-full p-2 hover:bg-akauntme/5 dark:hover:bg-akauntme/10 scale-90 hover:scale-105 transition-all">
+        <svg class="size-6 fill-akauntme dark:fill-slate-400">
+            <use href="#circled_menu-icon"></use>
+        </svg>
+    </button>
+
+    <div class="fixed inset-0 mx-5 mt-16 flex justify-center items-center z-[1000] lg:hidden"
+        [@fadeInOut]="modalOpen ? 'visible' : 'hidden'">
+        <div class="bg-white p-8 rounded shadow-lg shadow-teal-100/40 lg:hidden">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus aut iure harum! Ipsum magni
+                consequuntur atque voluptatum, voluptate pariatur laboriosam error corporis voluptas nesciunt tempora
+                enim, unde officia dolor nemo.
+
+            </p>
+            <button (click)="closeModal()"
+                class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Close</button>
+        </div>
     </div>
 
     <div>

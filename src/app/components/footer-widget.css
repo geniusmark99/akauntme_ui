@@ -1,0 +1,29 @@
+@keyframes slideIn {
+    0% {
+      transform: translateX(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 1;
+    }
+  }
+
+  .slide-in {
+    animation: slideIn 1.5s ease-in-out forwards alternate 5;
+  } 
+
+  @keyframes slideout {
+    0% {
+      transform: translateX(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+  }
+
+  .slide-out {
+    animation: slideout 1.5s ease-in-out forwards alternate 5;
+  }

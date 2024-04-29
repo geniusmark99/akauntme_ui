@@ -81,6 +81,14 @@ scroll-margin: 20px;
 scroll-behavior: smooth;
 }
 
+.home-tab-active {
+    @apply  relative
+  }
+
+.home-tab-active::after {
+@apply rounded-lg bg-akauntme h-[2px] absolute content-[''] w-full bottom-0 left-0
+}
+
 .akauntme-custom-scroller::-webkit-scrollbar-thumb {
 border-radius: 10px;
 }
@@ -98,7 +106,7 @@ scrollbar-width: thin;
 
 
 .desktop-sidebar-link {
-@apply flex justify-start items-center ml-4 w-[180px] transition-all px-4 text-white gap-x-3 hover:bg-white dark:hover:bg-slate-900 hover:text-akauntme py-2 rounded-md  cursor-pointer
+@apply flex justify-start items-center text-sm ml-4 w-[180px] transition-all px-4 text-white gap-x-3 hover:bg-white dark:hover:bg-slate-900 hover:text-akauntme py-2 rounded-md  cursor-pointer
 }
 
 .desktop-sidebar-link.active {
@@ -111,7 +119,7 @@ scrollbar-width: thin;
 }
 
 .mob-link {
-@apply flex flex-col items-center text-gray-500 text-xs md:text-sm
+@apply flex flex-col items-center text-gray-500 text-xs md:text-sm text-pretty font-semibold
 }
 
 .mob-link.active {

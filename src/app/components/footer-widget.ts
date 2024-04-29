@@ -6,6 +6,7 @@ import { trigger, state, style, animate, transition } from "@angular/animations"
     selector: 'footer-widget',
     standalone: true,
     templateUrl: './footer-widget.html',
+    styleUrl: './footer-widget.css',
     imports: [RouterLink, RouterLinkActive],
     animations: [
 

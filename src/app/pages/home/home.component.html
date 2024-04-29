@@ -4,52 +4,30 @@
 
     <main class="overflow-y-auto mt-2 w-full default-pd h-screen">
         <greeting-widget />
-        <!-- <div class="flex flex-col gap-y-1">
-            <div class="dashboard-scroller" [class]="firstTarget || secondTarget || thirdTarget">
-                @for ( dashboardList of dashboardLists; track dashboardList.id) {
-                <chart-widget [chartName]="dashboardList.name" [chartDays]="dashboardList.days"
-                    [chartDaysTotalAmounts]="dashboardList.amounts" [chartAmountHeights]="dashboardList.height" />
-                }
 
-
-            </div>
-
-            <div class="w-full flex justify-center lg:hidden">
-                <div class="flex justify-between gap-x-4">
-                    <button class="slider-btn active" (click)="addClassToFirstSlide($event)" [class]="">
-                        <div class="w-4 h-1 rounded-full"></div>
-                    </button>
-                    <button class="slider-btn" (click)="addClassToSecondSlide($event)">
-                        <div class="w-4 h-1 rounded-full"></div>
-                    </button>
-                    <button class="slider-btn" (click)="addClassToThirdSlide($event)">
-                        <div class="w-4 h-1 rounded-full"></div>
-                    </button>
+        <div class="tab mt-4">
+            <div class="flex border-b-2 border-gray-200 dark:border-slate-800">
+                <div (click)="activeTab = 'tab1'" [class.home-tab-active]="activeTab === 'tab1'"
+                    class="cursor-pointer p-4 text-slate-600 dark:text-slate-400 mr-4">Dashboard
+                </div>
+                <div (click)="activeTab = 'tab2'" [class.home-tab-active]="activeTab === 'tab2'"
+                    class="cursor-pointer p-4 text-slate-600 dark:text-slate-400 mx-4">Get Started
+                </div>
+                <div (click)="activeTab = 'tab3'" [class.home-tab-active]="activeTab === 'tab3'"
+                    class="cursor-pointer p-4 text-slate-600 dark:text-slate-400 mx-4">Recent Update
                 </div>
             </div>
+            @if (activeTab === 'tab1') {
+            <dashboardwidget />
+            }
+            @if (activeTab === 'tab2') {
+            <getstartedwidget />
+            }
+            @if (activeTab === 'tab3') {
+            <recentupdatewidget />
+            }
 
-
-            <div class="w-full justify-center hidden lg:flex">
-                <div class="flex justify-between gap-x-4">
-                    <button (mousedown)="onMouseDown($event)"
-                        class="h-3 rounded-full dark:bg-slate-700 flex justify-start px-2 items-center w-[200px] active cursor-grab">
-                        <div class="w-[150px] h-1 rounded-full bg-akauntme"></div>
-                    </button>
-                </div>
-
-            </div>
-
-
-        </div> -->
-
-
-        <!-- <div class="flex flex-col gap-y-1">
-
-
-
-         
-
-        </div> -->
+        </div>
     </main>
 
 

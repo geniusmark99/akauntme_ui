@@ -4,11 +4,14 @@ import { NavbarWidget } from '../../components/navbar-widget';
 import { GreetingWidget } from '../../components/greeting-widget';
 import { ChartWidget } from '../../components/chart-widget';
 import { NotificationWidget } from '../../components/notification-widget';
+import { DashboardwidgetComponent } from '../../widget/dashboardwidget/dashboardwidget.component';
+import { GetstartedwidgetComponent } from '../../widget/getstartedwidget/getstartedwidget.component';
+import { RecentupdatewidgetComponent } from '../../widget/recentupdatewidget/recentupdatewidget.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarWidget, GreetingWidget, NotificationWidget, ChartWidget],
+  imports: [NavbarWidget, GreetingWidget, NotificationWidget, ChartWidget, DashboardwidgetComponent, GetstartedwidgetComponent, RecentupdatewidgetComponent],
   templateUrl: './home.component.html',
   animations: [
     trigger('insertRemoveTrigger', [
@@ -23,6 +26,7 @@ import { NotificationWidget } from '../../components/notification-widget';
 
 
 export class HomeComponent implements OnInit {
+  activeTab: string = 'tab1';
 
   @ViewChild('scrollContainer', { static: true }) scrollContainer!: ElementRef;
   isDragging = false;

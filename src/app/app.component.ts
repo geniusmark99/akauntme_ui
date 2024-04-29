@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
     }
   }
 
-  // Toggle dark mode
   toggleDarkMode(): void {
     this.darkModeService.toggleDarkMode();
   }
@@ -47,6 +46,56 @@ export class AppComponent implements OnInit {
   showAdmin() {
     this.isAdmin = !this.isAdmin;
   }
+
+
+  sidebar_contents = [
+    {
+      name: "Dashboard",
+      link: "/home",
+      icon: "#desktop-dashboard-logo"
+    },
+    {
+      name: "Sales",
+      link: "/sales",
+      icon: "#desktop-sales-logo"
+    },
+    {
+      name: "Debts",
+      link: "/debts",
+      icon: "#desktop-debts-logo"
+    },
+
+    {
+      name: "Stocks",
+      link: "/stocks",
+      icon: "#desktop-stocks-logo"
+    },
+    {
+      name: "Services",
+      link: "/services",
+      icon: "#desktop-services-logo"
+    },
+    {
+      name: "Expenses",
+      link: "/expenses",
+      icon: "#desktop-expenses-logo"
+    },
+    {
+      name: "Reports",
+      link: "/reports",
+      icon: "#desktop-reports-logo"
+    },
+    {
+      name: "Histories",
+      link: "/history",
+      icon: "#desktop-histories-logo"
+    },
+    {
+      name: "Settings",
+      link: "/settings",
+      icon: "#desktop-settings-logo"
+    }
+  ];
 
 
 
