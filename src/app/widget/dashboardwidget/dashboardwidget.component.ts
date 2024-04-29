@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ChartWidget } from '../../components/chart-widget';
+
 
 @Component({
   selector: 'dashboardwidget',
