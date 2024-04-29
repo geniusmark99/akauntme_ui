@@ -31,7 +31,7 @@ import { trigger, state, style, animate, transition } from "@angular/animations"
             }),),
             state('closed', style({
                 opacity: 1,
-                transform: 'translateX(-5px) translateY(70px)'
+                transform: 'translateX(-5px) translateY(67px)'
             }),),
             transition('open => closed', [animate('0.5s')]),
             transition('closed => open', [animate('500ms')]),
@@ -45,7 +45,7 @@ import { trigger, state, style, animate, transition } from "@angular/animations"
             }),),
             state('closed', style({
                 opacity: 1,
-                transform: 'translateX(-72px) translateY(55px)'
+                transform: 'translateX(-70px) translateY(50px)'
             }),),
             transition('open => closed', [animate('0.5s')]),
             transition('closed => open', [animate('500ms')]),

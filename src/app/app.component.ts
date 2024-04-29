@@ -38,24 +38,6 @@ export class AppComponent implements OnInit {
   isDarkMode(): boolean {
     return this.darkModeService.isDarkMode();
   }
-  // isDarkMode = false; 
-  // darkModeService: DarkModeService = inject(DarkModeService);
-
-  // toggleDarkMode() {
-  //   this.darkModeService.updateDarkMode();
-  // }
-
-
-  // ngOnInit(): void {
-  //   this.isDarkMode = this.darkModeService?.isDarkMode() || false; // Optional: Use service state or initial state
-  //   !!document.body.classList.toggle('dark', this.isDarkMode); // Apply dark class based on state
-  // }
-
-  // toggleTheme(): void {
-  //   this.isDarkMode = !this.isDarkMode;
-  //   document.body.classList.toggle('dark');
-  //   this.darkModeService?.toggleDarkMode(); // Optional: Persist state in service
-  // }
 
 
   title = 'app';
